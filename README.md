@@ -53,14 +53,14 @@ MI AMOR
   <button onclick="mostrarCarta()">Entrar</button>
   
   <div id="carta">
-    <h2>Para mi Dani 💙</h2>
+    <h2>Para mi niña bonita❤️ </h2>
     <p>
       Amor, quería regalarte algo diferente.  
       Quiero que sepas que eres lo más importante en mi vida y que cada día me siento afortunado de tenerte conmigo.  
       Eres mi alegría, mi paz y mi motivación.  
       Te amo con todo mi corazón 💙
     </p>
-    <p>Con todo mi amor,<br>Tu Benjamin 💕</p>
+    <p>Con todo mi amor,<br> de la persona que mas te ama  💕</p>
   </div>
 
   <script>
@@ -75,6 +75,4 @@ MI AMOR
   </script>
 </body>
 </html>
-<audio autoplay loop>
-  <source src="https://unnn.mnuu.nu/api" type="audio/mpeg">
-</audio>
+
