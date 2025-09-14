@@ -1,4 +1,8 @@
-MI AMOR
+  </style>
+</head>
+<body>
+  <h1>  MI AMOR </h1>
+  
 <html lang="es">
 <head>
   <meta charset="UTF-8">
