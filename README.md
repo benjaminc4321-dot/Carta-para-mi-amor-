@@ -1,7 +1,5 @@
-  </style>
-</head>
-<body>
-  <h1>  MI AMOR </h1>
+
+  <h2> MI AMOR </h2>
   
 <html lang="es">
 <head>
