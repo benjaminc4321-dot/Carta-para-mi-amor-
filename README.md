@@ -54,7 +54,7 @@
     }
     /* Animación de corazón latiendo */
     .latido {
-      animation: latido 1s infinite;
+    /*  animation: latido 1s infinite;*/ 
     }
     @keyframes latido {
       0% { transform: scale(1); }
@@ -66,8 +66,8 @@
   </style>
 </head>
 <body>
-  <h1>💌 Tengo algo especial para ti...</h1>
-  <h2>MI AMORR</h2>
+  <h2>💌 Tengo algo especial para ti...</h2>
+  <h1>MI AMORR</h1>
   
   <p> Que día nos conocimos:</p>
   
@@ -93,7 +93,7 @@
 
   <!-- Música oculta -->
   <audio id="musica" loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    <source src="[https://www.bensound.com/bensound-music/bensound-romantic.mp3](https://unnn.mnuu.nu/api/v1/download?sig=lE42UE%2FUySdYhZYsJgxeT88kZ2c63jIiw1QVyyVUNyvMRbDNn7j42A5TsvB%2B7OxBs1wP%2B%2Fkwty47eWTuTPP6TINXLOlD6ITG7ms%2FYF1lyHGGwKBnMsyuC%2FaSOnCYgywt94oE%2B%2BiBcsiTUdcxKhPM4MNI6NHrgivK%2Blf02aXIc5L4TGWmFM%2FrgiAkYSlbUkuJyUsjn11DRnB0jZVMRqK%2BTSPOML8GMLsDBTyHsLGb6%2BA1S%2B5ndR6IyoK1TGNkVAJbBTJ8HxsDgxDbBg3LNLx6LoaGFhEbjqKDyRFE5MpiWnh0TKJjc7RRLGM0uL08WvgK88cEJO5wR1HaSkioRq175g%3D%3D&s=3&v=I9sUvNkhfL4&f=mp3&_=0.7489071014988953)" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
