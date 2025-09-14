@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+MI AMOR
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -46,9 +46,9 @@
 </head>
 <body>
   <h1>💌 Tengo algo especial para ti...</h1>
-  <p>Escribe la palabra secreta para descubrirlo:</p>
+  <p> Que dia nos conocimos:</p>
   
-  <input type="password" id="clave" placeholder="Escribe aquí...">
+  <input type="password" id="clave" placeholder="DD/MM/YYYY">
   <br>
   <button onclick="mostrarCarta()">Entrar</button>
   
@@ -66,10 +66,10 @@
   <script>
     function mostrarCarta() {
       const clave = document.getElementById("clave").value.toLowerCase();
-      if(clave === "amor"){ // ← aquí defines la contraseña
+      if(clave === "15/05/2025"){ // ← aquí defines la contraseña
         document.getElementById("carta").style.display = "block";
       } else {
-        alert("Esa no es la palabra secreta 😉");
+        alert(" DIE EN EL QUE HABALMOS POR OMEGLE");
       }
     }
   </script>
