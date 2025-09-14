@@ -9,6 +9,7 @@
       text-align: center;
       padding: 50px;
       color: #333;
+      overflow-x: hidden;
     }
     #carta {
       display: none;
@@ -44,7 +45,7 @@
       background: #ff5d85;
     }
     #controlMusica {
-      display: none; /* oculto hasta que desbloquee la carta */
+      display: none;
       margin-top: 20px;
       background: #e63973;
       font-size: 18px;
@@ -52,9 +53,8 @@
     #controlMusica:hover {
       background: #c2185b;
     }
-    /* Animación de corazón latiendo */
     .latido {
-    /*  animation: latido 1s infinite;*/ 
+      animation: latido 1s infinite;
     }
     @keyframes latido {
       0% { transform: scale(1); }
@@ -63,12 +63,62 @@
       75% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
+    /* Estilo de la gran pregunta */
+    #pregunta {
+      display: none;
+      margin-top: 40px;
+    }
+    #pregunta h1 {
+      font-size: 50px;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+    .opciones {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    .opcion {
+      padding: 20px 40px;
+      border-radius: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .opcion:hover {
+      transform: scale(1.1);
+    }
+    .si {
+      background: #ff4d6d;
+      color: white;
+      animation: brillo 1.5s infinite alternate;
+    }
+    .no {
+      background: #6c757d;
+      color: white;
+    }
+    @keyframes brillo {
+      from { box-shadow: 0 0 10px #ff4d6d; }
+      to { box-shadow: 0 0 30px #ff4d6d; }
+    }
+    /* Corazones animados */
+    .corazon {
+      position: fixed;
+      font-size: 25px;
+      animation: flotar 4s linear infinite;
+      z-index: 999;
+      pointer-events: none;
+    }
+    @keyframes flotar {
+      from { transform: translateY(100vh) scale(1); opacity: 1; }
+      to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
   </style>
 </head>
 <body>
-  <h1>MI AMOR</h1>
-  <h2>💌 Tengo algo especial para ti...</h2>
-
+  <h1>💌 Tengo algo especial para ti...</h1>
+  <h2>MI AMORR</h2>
   
   <p> Que día nos conocimos:</p>
   
@@ -87,19 +137,26 @@
     <p>Con todo mi amor,<br> de la persona que más te ama 💕</p>
 
     <!-- Botón para pausar/reanudar música -->
-    <button id="controlMusica" onclick="toggleMusica()">
-      ❤️ Pausar Música
-    </button>
+    <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
+
+    <!-- Pregunta romántica -->
+    <div id="pregunta">
+      <h1>¿Puedo ser tu novio? 💍</h1>
+      <div class="opciones">
+        <div class="opcion si" onclick="aceptar()">Siii 💖</div>
+        <div class="opcion no" onclick="rechazar()">No 😢</div>
+      </div>
+    </div>
   </div>
 
   <!-- Música oculta -->
   <audio id="musica" loop>
-    <source src="[https://www.bensound.com/bensound-music/bensound-romantic.mp3](https://unnn.mnuu.nu/api/v1/download?sig=lE42UE%2FUySdYhZYsJgxeT88kZ2c63jIiw1QVyyVUNyvMRbDNn7j42A5TsvB%2B7OxBs1wP%2B%2Fkwty47eWTuTPP6TINXLOlD6ITG7ms%2FYF1lyHGGwKBnMsyuC%2FaSOnCYgywt94oE%2B%2BiBcsiTUdcxKhPM4MNI6NHrgivK%2Blf02aXIc5L4TGWmFM%2FrgiAkYSlbUkuJyUsjn11DRnB0jZVMRqK%2BTSPOML8GMLsDBTyHsLGb6%2BA1S%2B5ndR6IyoK1TGNkVAJbBTJ8HxsDgxDbBg3LNLx6LoaGFhEbjqKDyRFE5MpiWnh0TKJjc7RRLGM0uL08WvgK88cEJO5wR1HaSkioRq175g%3D%3D&s=3&v=I9sUvNkhfL4&f=mp3&_=0.7489071014988953)" type="audio/mpeg">
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
   <script>
-    const passwordCorrecta = "15/05/2025"; // ← contraseña
+    const passwordCorrecta = "15/05/2025"; 
     let reproduciendo = false;
 
     function mostrarCarta() {
@@ -111,17 +168,19 @@
           carta.style.opacity = "1";
         }, 50);
 
-        // Reproducir música
+        // Música
         const musica = document.getElementById("musica");
         musica.volume = 0.4; 
         musica.play();
         reproduciendo = true;
 
-        // Mostrar botón de control con corazón latiendo
         const boton = document.getElementById("controlMusica");
         boton.style.display = "inline-block";
         boton.innerHTML = "❤️ Pausar Música";
         boton.classList.add("latido");
+
+        // Mostrar la gran pregunta
+        document.getElementById("pregunta").style.display = "block";
       } else {
         alert("Día en el que hablamos por Omegle 💕 (Formato: DD/MM/YYYY)");
       }
@@ -142,6 +201,29 @@
         boton.classList.add("latido");
         reproduciendo = true;
       }
+    }
+
+    function aceptar() {
+      for (let i = 0; i < 30; i++) {
+        crearCorazon();
+      }
+      alert("💖 Sabía que dirías que sí, mi amor 💖");
+    }
+
+    function rechazar() {
+      alert("😢 Oh no... inténtalo de nuevo amor 🥺");
+    }
+
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.textContent = "💖";
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.animationDuration = (3 + Math.random() * 2) + "s";
+      document.body.appendChild(corazon);
+      setTimeout(() => {
+        corazon.remove();
+      }, 5000);
     }
   </script>
 </body>
