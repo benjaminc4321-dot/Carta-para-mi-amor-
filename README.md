@@ -1,4 +1,3 @@
-b
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -44,11 +43,31 @@ b
     button:hover {
       background: #ff5d85;
     }
+    #controlMusica {
+      display: none; /* oculto hasta que desbloquee la carta */
+      margin-top: 20px;
+      background: #e63973;
+      font-size: 18px;
+    }
+    #controlMusica:hover {
+      background: #c2185b;
+    }
+    /* Animación de corazón latiendo */
+    .latido {
+      animation: latido 1s infinite;
+    }
+    @keyframes latido {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
   </style>
 </head>
 <body>
   <h1>💌 Tengo algo especial para ti...</h1>
-  <h2>MI AMOR</h2>
+  <h2>MI AMORR</h2>
   
   <p> Que día nos conocimos:</p>
   
@@ -65,6 +84,11 @@ b
       Te amo con todo mi corazón 💙
     </p>
     <p>Con todo mi amor,<br> de la persona que más te ama 💕</p>
+
+    <!-- Botón para pausar/reanudar música -->
+    <button id="controlMusica" onclick="toggleMusica()">
+      ❤️ Pausar Música
+    </button>
   </div>
 
   <!-- Música oculta -->
@@ -75,6 +99,7 @@ b
 
   <script>
     const passwordCorrecta = "15/05/2025"; // ← contraseña
+    let reproduciendo = false;
 
     function mostrarCarta() {
       const clave = document.getElementById("clave").value.trim();
@@ -87,10 +112,34 @@ b
 
         // Reproducir música
         const musica = document.getElementById("musica");
-        musica.volume = 0.4; // volumen bajito
+        musica.volume = 0.4; 
         musica.play();
+        reproduciendo = true;
+
+        // Mostrar botón de control con corazón latiendo
+        const boton = document.getElementById("controlMusica");
+        boton.style.display = "inline-block";
+        boton.innerHTML = "❤️ Pausar Música";
+        boton.classList.add("latido");
       } else {
         alert("Día en el que hablamos por Omegle 💕 (Formato: DD/MM/YYYY)");
+      }
+    }
+
+    function toggleMusica() {
+      const musica = document.getElementById("musica");
+      const boton = document.getElementById("controlMusica");
+
+      if (reproduciendo) {
+        musica.pause();
+        boton.innerHTML = "💔 Reanudar Música";
+        boton.classList.remove("latido");
+        reproduciendo = false;
+      } else {
+        musica.play();
+        boton.innerHTML = "❤️ Pausar Música";
+        boton.classList.add("latido");
+        reproduciendo = true;
       }
     }
   </script>
