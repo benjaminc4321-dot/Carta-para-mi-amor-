@@ -1,4 +1,4 @@
-MI AMOReeeeee
+MI AMOR
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -53,7 +53,7 @@ MI AMOReeeeee
   <button onclick="mostrarCarta()">Entrar</button>
   
   <div id="carta">
-    <h2>Para mi niña bonita❤️ </h2>
+    <h2>Para mi niña bonita❤ </h2>
     <p>
       Amor, quería regalarte algo diferente.  
       Quiero que sepas que eres lo más importante en mi vida y que cada día me siento afortunado de tenerte conmigo.  
