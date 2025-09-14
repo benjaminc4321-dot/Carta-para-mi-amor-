@@ -69,7 +69,7 @@ MI AMOR
       if(clave === "15/05/2025"){ // ← aquí defines la contraseña
         document.getElementById("carta").style.display = "block";
       } else {
-        alert(" DIE EN EL QUE HABALMOS POR OMEGLE");
+        alert(" DIA EN EL QUE HABALMOS POR OMEGLE");
       }
     }
   </script>
