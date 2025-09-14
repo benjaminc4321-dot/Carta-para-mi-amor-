@@ -48,7 +48,7 @@
 </head>
 <body>
   <h1>💌 Tengo algo especial para ti...</h1>
-  <h2>MI AMORR</h2>
+  <h2>MI AMOR</h2>
   
   <p> Que día nos conocimos:</p>
   
