@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -7,10 +8,45 @@
       font-family: "Segoe UI", sans-serif;
       background: linear-gradient(135deg, #a2d2ff, #ffc8dd);
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px;
       color: #333;
       overflow-x: hidden;
+      min-height: 100vh;
     }
+
+    /* Corazones flotando en el fondo */
+    body::before {
+      content: "💖 💕 💗 💓";
+      position: fixed;
+      top: -10%;
+      left: 50%;
+      font-size: 40px;
+      animation: fondoCorazones 15s linear infinite;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    @keyframes fondoCorazones {
+      0% { transform: translateX(0) translateY(0); }
+      100% { transform: translateX(-50vw) translateY(110vh); }
+    }
+
+    /* Animación de inicio */
+    #inicio h1, #inicio h2 {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: aparecer 1.5s forwards;
+    }
+    #inicio h2 {
+      animation-delay: 0.5s;
+    }
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Caja carta */
     #carta {
       display: none;
       background: white;
@@ -23,14 +59,19 @@
       line-height: 1.6;
       opacity: 0;
       transition: opacity 1s ease-in-out;
+      position: relative;
+      z-index: 1;
     }
+
     input {
       padding: 10px;
       border-radius: 10px;
       border: none;
       font-size: 16px;
       margin-top: 10px;
+      text-align: center;
     }
+
     button {
       margin-top: 15px;
       padding: 10px 20px;
@@ -44,6 +85,7 @@
     button:hover {
       background: #ff5d85;
     }
+
     #controlMusica {
       display: none;
       margin-top: 40px;
@@ -63,13 +105,14 @@
       75% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
-    /* Estilo de la gran pregunta */
+
+    /* Pregunta romántica */
     #pregunta {
       display: none;
       margin-top: 40px;
     }
     #pregunta h1 {
-      font-size: 50px;
+      font-size: 40px;
       color: #d63384;
       margin-bottom: 30px;
     }
@@ -77,11 +120,12 @@
       display: flex;
       justify-content: center;
       gap: 40px;
+      position: relative;
     }
     .opcion {
       padding: 20px 40px;
       border-radius: 15px;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
       cursor: pointer;
       transition: transform 0.3s ease;
@@ -97,11 +141,13 @@
     .no {
       background: #6c757d;
       color: white;
+      position: relative;
     }
     @keyframes brillo {
       from { box-shadow: 0 0 10px #ff4d6d; }
       to { box-shadow: 0 0 30px #ff4d6d; }
     }
+
     /* Corazones animados */
     .corazon {
       position: fixed;
@@ -114,10 +160,50 @@
       from { transform: translateY(100vh) scale(1); opacity: 1; }
       to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
     }
+
+    /* Máquina de escribir */
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #ff4d6d;
+      animation: typing 5s steps(50, end), blink .7s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #ff4d6d; }
+    }
+
+    /* Mensaje sorpresa */
+    #sorpresa {
+      display: none;
+      font-size: 40px;
+      color: #ff4d6d;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      #carta {
+        font-size: 16px;
+        padding: 20px;
+      }
+      .opcion {
+        font-size: 18px;
+        padding: 15px 20px;
+      }
+      #pregunta h1 {
+        font-size: 28px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- INICIO ocultable -->
+  <!-- INICIO -->
   <div id="inicio">
     <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
@@ -131,15 +217,11 @@
   <!-- CARTA -->
   <div id="carta">
     <h2>Para mi niña bonita ❤</h2>
-    <p>
-      Mi amor hoy quise escribirte, no porque me falten las palabras cuando estoy contigo, sino porque a veces siento que lo que llevo dentro no cabe en un solo “te amo”. Quiero que sepas, desde lo más profundo de mi corazón, lo importante que eres para mí, eres mi alegría, mi paz, y el motivo más grande por el que sonrío cada día, estar contigo me hace inmensamente feliz, aveces me detengo a pensar en cómo llegaste a mi vida, y no puedo evitar sentirme afortunado, eres esa persona con la que todo se siente más bonito, más sencillo, más real, sé que nuestra relación no es fácil, la distancia, a veces, duele más de lo que decimos, pero también sé que nuestro amor es más fuerte que cualquier kilómetro entre nosotros, porque aunque hoy no pueda abrazarte, ni tomar tu mano, te llevo conmigo en cada pensamiento, en cada suspiro, en cada sueño que tengo contigo, estamos lejos, si, pero eso solo significa que nos estamos preparando para estar tan cerca que nada ni nadie pueda separarnos.
+    <p class="typewriter">
+      Mi amor hoy quise escribirte, no porque me falten palabras cuando estoy contigo, sino porque a veces siento que lo que llevo dentro no cabe en un solo “te amo”.
     </p>
     <p>
-      Amor, deseo con todo mi ser hacerte sentir amada todos los días, aún desde la distancia, quiero que nunca te falte un abrazo mío, aunque por ahora sea imaginario, una palabra de aliento, un “te amo” que te recuerde lo valiosa que eres, me esfuerzo, y me seguiré esforzando, por ser alguien que sume a tu vida, que te cuide, que te haga sentir en paz, segura, feliz estés donde estés, más allá de las palabras, quiero que lo nuestro funcione, y que cada paso que demos juntos nos acerque más a eso que tanto soñamos, construir una vida a tu lado, casarnos, compartir los días buenos y también los difíciles, y saber que siempre nos tendremos el uno al otro, ese sueño que hemos grabado en nuestras conversaciones, en nuestros planes, en cada promesa que nos hemos hecho lo quiero vivir contigo, amor. Quiero que se haga realidad, prometo seguir amándote con fuerza, con paciencia, con entrega, prometo estar contigo, crecer contigo, caminar contigo, y cuando llegue ese día, cuando al fin estemos juntos, volveré a prometerte, frente al mundo, todo lo que ya hoy te prometo con el corazón.
-    </p>
-    <p>
-      Y mientras terminaba esta carta, me di cuenta de algo que cada palabra que te he escrito es más que amor, es una declaración.
-      Así que no quiero terminar sin preguntarte:
+      Quiero que sepas, desde lo más profundo de mi corazón, lo importante que eres para mí, eres mi alegría, mi paz, y el motivo más grande por el que sonrío cada día...
     </p>
 
     <!-- Pregunta romántica -->
@@ -151,19 +233,13 @@
       </div>
     </div>
 
-    <p>
-      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. 
-      Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente. 
-      Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia 
-      y mucho más cuando por fin no haya ninguna. 
-      Con todo mi amor de tu amorcito hermoso ❤️🥺
-    </p>
+    <div id="sorpresa">💍 Eres el amor de mi vida 💍</div>
 
     <!-- Botón de música al final -->
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
 
-  <!-- Música oculta -->
+  <!-- Música -->
   <audio id="musica" loop>
     <source src="musica.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
@@ -173,32 +249,33 @@
     const passwordCorrecta = "15/05/2025"; 
     let reproduciendo = false;
 
-    function mostrarCarta() {
+    // Verificar si ya entró
+    if(localStorage.getItem("entro") === "true"){
+      mostrarCarta(true);
+    }
+
+    function mostrarCarta(yaEntro = false) {
       const clave = document.getElementById("clave").value.trim();
-      if(clave === passwordCorrecta){
-        // Ocultar inicio
+      if(yaEntro || clave === passwordCorrecta){
+        localStorage.setItem("entro", "true");
         document.getElementById("inicio").style.display = "none";
 
-        // Mostrar carta
         const carta = document.getElementById("carta");
         carta.style.display = "block";
         setTimeout(() => {
           carta.style.opacity = "1";
         }, 50);
 
-        // Música
         const musica = document.getElementById("musica");
         musica.volume = 0.4; 
         musica.play();
         reproduciendo = true;
 
-        // Mostrar botón de música
         const boton = document.getElementById("controlMusica");
         boton.style.display = "inline-block";
         boton.innerHTML = "❤️ Pausar Música";
         boton.classList.add("latido");
 
-        // Mostrar la gran pregunta
         document.getElementById("pregunta").style.display = "block";
       } else {
         alert("Día en el que hablamos por Omegle 💕 (Formato: DD/MM/YYYY)");
@@ -226,11 +303,19 @@
       for (let i = 0; i < 30; i++) {
         crearCorazon();
       }
-      alert("💖 Sabía que dirías que sí, mi amor 💖");
+      document.getElementById("sorpresa").style.display = "block";
+      document.getElementById("sorpresa").animate([
+        { transform: "scale(0)", opacity: 0 },
+        { transform: "scale(1.2)", opacity: 1 },
+        { transform: "scale(1)", opacity: 1 }
+      ], { duration: 1000, easing: "ease-out" });
     }
 
     function rechazar() {
-      alert("Inténtalo de nuevo amor 🥺");
+      const noBtn = document.querySelector(".no");
+      noBtn.style.position = "absolute";
+      noBtn.style.top = Math.random() * window.innerHeight * 0.8 + "px";
+      noBtn.style.left = Math.random() * window.innerWidth * 0.8 + "px";
     }
 
     function crearCorazon() {
