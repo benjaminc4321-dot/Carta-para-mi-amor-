@@ -11,9 +11,6 @@
       color: #333;
       overflow-x: hidden;
     }
-    #inicio {
-      margin-top: 20px;
-    }
     #carta {
       display: none;
       background: white;
@@ -66,6 +63,7 @@
       75% { transform: scale(1.2); }
       100% { transform: scale(1); }
     }
+    /* Estilo de la gran pregunta */
     #pregunta {
       display: none;
       margin-top: 40px;
@@ -104,6 +102,7 @@
       from { box-shadow: 0 0 10px #ff4d6d; }
       to { box-shadow: 0 0 30px #ff4d6d; }
     }
+    /* Corazones animados */
     .corazon {
       position: fixed;
       font-size: 25px;
@@ -118,16 +117,18 @@
   </style>
 </head>
 <body>
-   <h1>MI111 AMOR</h1>
-  <h2>💌 Tengo algo especial para ti...</h2>
-  
+  <!-- INICIO ocultable -->
   <div id="inicio">
-    <p>Que día nos conocimos:</p>
+    <h1>MI AMOR</h1>
+    <h2>💌 Tengo algo especial para ti...</h2>
+    
+    <p> Que día nos conocimos:</p>
     <input type="password" id="clave" placeholder="DD/MM/YYYY">
     <br>
     <button onclick="mostrarCarta()">Entrar</button>
   </div>
   
+  <!-- CARTA -->
   <div id="carta">
     <h2>Para mi niña bonita ❤</h2>
     <p>
@@ -141,6 +142,7 @@
       Así que no quiero terminar sin preguntarte:
     </p>
 
+    <!-- Pregunta romántica -->
     <div id="pregunta">
       <h1>¿Puedo ser tu novio? 💍</h1>
       <div class="opciones">
@@ -154,15 +156,16 @@
       Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente. 
       Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia 
       y mucho más cuando por fin no haya ninguna. 
-      Con todo mi amor de tu amorcito hermoso❤️🥺
+      Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
 
+    <!-- Botón de música al final -->
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
 
-  <!-- Música personalizada -->
+  <!-- Música oculta -->
   <audio id="musica" loop>
-    <source src="https://www.ejemplo.com/romantica.mp3" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
@@ -173,23 +176,29 @@
     function mostrarCarta() {
       const clave = document.getElementById("clave").value.trim();
       if(clave === passwordCorrecta){
-        document.getElementById("inicio").style.display = "none"; 
+        // Ocultar inicio
+        document.getElementById("inicio").style.display = "none";
+
+        // Mostrar carta
         const carta = document.getElementById("carta");
         carta.style.display = "block";
         setTimeout(() => {
           carta.style.opacity = "1";
         }, 50);
 
+        // Música
         const musica = document.getElementById("musica");
         musica.volume = 0.4; 
         musica.play();
         reproduciendo = true;
 
+        // Mostrar botón de música
         const boton = document.getElementById("controlMusica");
         boton.style.display = "inline-block";
         boton.innerHTML = "❤️ Pausar Música";
         boton.classList.add("latido");
 
+        // Mostrar la gran pregunta
         document.getElementById("pregunta").style.display = "block";
       } else {
         alert("Día en el que hablamos por Omegle 💕 (Formato: DD/MM/YYYY)");
