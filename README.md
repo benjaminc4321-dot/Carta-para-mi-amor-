@@ -154,7 +154,7 @@
       Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente. 
       Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia 
       y mucho más cuando por fin no haya ninguna. 
-      Con todo mi amor de tu amorcito hermoso ❤️🥺
+      Con todo mi amor de tu amorcito hermoso❤️🥺
     </p>
 
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
