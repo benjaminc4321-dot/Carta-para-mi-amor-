@@ -117,15 +117,18 @@
   </style>
 </head>
 <body>
-   <h1>MI AMOR</h1>
-  <h2>💌 Tengo algo especial para ti...</h2>
+  <!-- INICIO ocultable -->
+  <div id="inicio">
+    <h1>MI AMOR</h1>
+    <h2>💌 Tengo algo especial para ti...</h2>
+    
+    <p> Que día nos conocimos:</p>
+    <input type="password" id="clave" placeholder="DD/MM/YYYY">
+    <br>
+    <button onclick="mostrarCarta()">Entrar</button>
+  </div>
   
-  <p> Que día nos conocimos:</p>
-  
-  <input type="password" id="clave" placeholder="DD/MM/YYYY">
-  <br>
-  <button onclick="mostrarCarta()">Entrar</button>
-  
+  <!-- CARTA -->
   <div id="carta">
     <h2>Para mi niña bonita ❤</h2>
     <p>
@@ -162,7 +165,7 @@
 
   <!-- Música oculta -->
   <audio id="musica" loop>
-    <source src="[https://sheila50.savenow.to/pacific/?XrYvPcoLgcsWX7HQA9kQxFm]" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
@@ -173,6 +176,10 @@
     function mostrarCarta() {
       const clave = document.getElementById("clave").value.trim();
       if(clave === passwordCorrecta){
+        // Ocultar inicio
+        document.getElementById("inicio").style.display = "none";
+
+        // Mostrar carta
         const carta = document.getElementById("carta");
         carta.style.display = "block";
         setTimeout(() => {
