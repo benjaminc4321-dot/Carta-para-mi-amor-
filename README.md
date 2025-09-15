@@ -1,4 +1,4 @@
-<html lang="es"> 
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Para mi Amor 💙</title>
@@ -46,7 +46,7 @@
     }
     #controlMusica {
       display: none;
-      margin-top: 20px;
+      margin-top: 40px;
       background: #e63973;
       font-size: 18px;
     }
@@ -117,8 +117,9 @@
   </style>
 </head>
 <body>
-   <h1>MI AMORRrrrrrr</h1>
+   <h1>MI AMOR</h1>
   <h2>💌 Tengo algo especial para ti...</h2>
+ 
   
   <p> Que día nos conocimos:</p>
   
@@ -129,18 +130,10 @@
   <div id="carta">
     <h2>Para mi niña bonita ❤</h2>
     <p>
-     Mi amor hoy quise escribirte, no porque me falten las palabras cuando estoy contigo, sino porque a veces siento que lo que llevo dentro no cabe en un solo “te amo”. Quiero que sepas, desde lo más profundo de mi corazón, lo importante que eres para mí, eres mi alegría, mi paz, y el motivo más grande por el que sonrío cada día, estar contigo me hace inmensamente feliz, aveces me detengo a pensar en cómo llegaste a mi vida, y no puedo evitar sentirme afortunado, eres esa persona con la que todo se siente más bonito, más sencillo, más real, sé que nuestra relación no es fácil, la distancia, a veces, duele más de lo que decimos, pero también sé que nuestro amor es más fuerte que cualquier kilómetro entre nosotros, porque aunque hoy no pueda abrazarte, ni tomar tu mano, te llevo conmigo en cada pensamiento, en cada suspiro, en cada sueño que tengo contigo, estamos lejos, si, pero eso solo significa que nos estamos preparando para estar tan cerca que nada ni nadie pueda separarnos.
-
-Amor, deseo con todo mi ser hacerte sentir amada todos los días, aún desde la distancia, quiero que nunca te falte un abrazo mío, aunque por ahora sea imaginario, una palabra de aliento, un “te amo” que te recuerde lo valiosa que eres, me esfuerzo, y me seguiré esforzando, por ser alguien que sume a tu vida, que te cuide, que te haga sentir en paz, segura, feliz estés donde estés, más allá de las palabras, quiero que lo nuestro funcione, y que cada paso que demos juntos nos acerque más a eso que tanto soñamos, construir una vida a tu lado, casarnos, compartir los días buenos y también los difíciles, y saber que siempre nos tendremos el uno al otro, ese sueño que hemos grabado en nuestras conversaciones, en nuestros planes, en cada promesa que nos hemos hecho lo quiero vivir contigo, amor. Quiero que se haga realidad, prometo seguir amándote con fuerza, con paciencia, con entrega, prometo estar contigo, crecer contigo, caminar contigo, y cuando llegue ese día, cuando al fin estemos juntos, volveré a prometerte, frente al mundo, todo lo que ya hoy te prometo con el corazón.
-
-Y mientras terminaba esta carta, me di cuenta de algo que cada palabra que te he escrito es más que amor, es una declaración.
-Así que no quiero terminar sin preguntarte:
-
+      Amor, quería regalarte algo diferente.  
+      Quiero que sepas que eres lo más importante en mi vida y que cada día me siento afortunado de tenerte conmigo.  
+      Eres mi alegría, mi paz y mi motivación.  
     </p>
-    <p>Con todo mi amor,<br> de la persona que más te ama 💕</p>
-
-    <!-- Botón para pausar/reanudar música -->
-    <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
 
     <!-- Pregunta romántica -->
     <div id="pregunta">
@@ -150,6 +143,16 @@ Así que no quiero terminar sin preguntarte:
         <div class="opcion no" onclick="rechazar()">No 😢</div>
       </div>
     </div>
+
+    <!-- Aquí puedes seguir agregando más texto -->
+    <p>
+      Pase lo que pase, siempre estaré contigo, apoyándote en todo momento.  
+      Gracias por ser quien eres y por llenar mi vida de felicidad. 💕  
+    </p>
+    <p>Con todo mi amor,<br> de la persona que más te ama 💕</p>
+
+    <!-- Botón de música al final -->
+    <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
 
   <!-- Música oculta -->
@@ -177,6 +180,7 @@ Así que no quiero terminar sin preguntarte:
         musica.play();
         reproduciendo = true;
 
+        // Mostrar botón de música
         const boton = document.getElementById("controlMusica");
         boton.style.display = "inline-block";
         boton.innerHTML = "❤️ Pausar Música";
