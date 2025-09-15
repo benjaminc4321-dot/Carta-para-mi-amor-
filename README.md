@@ -156,9 +156,6 @@
       Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
 
-    <!-- FOTO CON MARCO DE CORAZONES -->
-<img src="![image](https://github.com/user-attachments/assets/f3d18ca3-9787-4423-9272-47b2cec69dc2)
-" alt="Marco con corazones">
     <!-- Botón de música al final -->
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
