@@ -117,7 +117,7 @@
   </style>
 </head>
 <body>
-   <h1>MI AMOR</h1>
+   <h1>MII AMOR</h1>
   <h2>💌 Tengo algo especial para ti...</h2>
   
   <p> Que día nos conocimos:</p>
@@ -157,10 +157,8 @@
     </p>
 
     <!-- FOTO CON MARCO DE CORAZONES -->
-<img src="7C35A2C1-1A2A-43EB-881A-6C913D2E3EF4.png" 
-     alt="Marco de corazones" 
-     width="350" 
-     style="border-radius:15px; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+<img src="![image](https://github.com/user-attachments/assets/f3d18ca3-9787-4423-9272-47b2cec69dc2)
+" alt="Marco con corazones">
     <!-- Botón de música al final -->
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
