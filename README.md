@@ -152,8 +152,8 @@ Así que no quiero terminar sin preguntarte:
 
     <!-- Aquí puedes seguir agregando más texto -->
     <p>
-      Pase lo que pase, siempre estaré contigo, apoyándote en todo momento.  
-      Gracias por ser quien eres y por llenar mi vida de felicidad. 💕  
+      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.
+Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
     <p>Con todo mi amor,<br> de la persona que más te ama 💕</p>
 
