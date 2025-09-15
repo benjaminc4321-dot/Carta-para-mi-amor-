@@ -153,10 +153,11 @@ Así que no quiero terminar sin preguntarte:
     <!-- Aquí puedes seguir agregando más texto -->
     <p>
       No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
+      <!-- Aquí va tu foto -->
+<img src="![image](https://github.com/user-attachments/assets/918fce69-4195-459c-8226-8f5c2d692b61)
+" alt="Nuestra foto" width="300" style="border-radius:15px; margin:20px 0; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
 
 
-    </p>
-    <p>Con todo mi amor,<br> de la persona que más te ama 💕</p>
 
     <!-- Botón de música al final -->
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
