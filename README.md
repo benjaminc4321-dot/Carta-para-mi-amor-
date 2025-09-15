@@ -117,7 +117,7 @@
   </style>
 </head>
 <body>
-   <h1>MI AAMOR</h1>
+   <h1>MI AMOR</h1>
   <h2>💌 Tengo algo especial para ti...</h2>
   
   <p> Que día nos conocimos:</p>
