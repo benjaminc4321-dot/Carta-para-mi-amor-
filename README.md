@@ -162,7 +162,7 @@
 
   <!-- Música oculta -->
   <audio id="musica" loop>
-    <source src="[https://www.bensound.com/bensound-music/bensound-romantic.mp3](https://node20.dlmate.cc/api/dl?link=https%3A%2F%2Fdelta.123tokyo.xyz%2Fget.php%2F3%2F3d%2FI9sUvNkhfL4.mp3%3Fn%3DKidd%2520Voodoo%2520-%2520Destello...%2520%2528Visualizer%2529%26uT%3DR%26uN%3DZnJlZXNvZnR3YXJlNzg%253D%26h%3DadQZWce8d-NeM74ze9UBFA%26s%3D1757925327%26uT%3DR%26uN%3DZnJlZXNvZnR3YXJlNzg%253D)" type="audio/mpeg">
+    <source src="[https://sheila50.savenow.to/pacific/?XrYvPcoLgcsWX7HQA9kQxFm]" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
