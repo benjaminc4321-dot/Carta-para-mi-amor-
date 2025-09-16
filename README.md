@@ -24,22 +24,17 @@
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
-    input {
-      padding: 10px;
+    input, button {
+      padding: 10px 20px;
       border-radius: 10px;
       border: none;
       font-size: 16px;
-      margin-top: 10px;
+      margin-top: 15px;
+      cursor: pointer;
     }
     button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
       background: #ff85a1;
       color: white;
-      font-size: 16px;
-      cursor: pointer;
     }
     button:hover {
       background: #ff5d85;
@@ -114,14 +109,12 @@
       from { transform: translateY(100vh) scale(1); opacity: 1; }
       to { transform: translateY(-10vh) scale(1.5); opacity: 0; }
     }
-
-
   </style>
 </head>
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MII AMOR</h1>
+    <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
@@ -134,16 +127,17 @@
   <div id="carta">
     <h2>Para mi niña bonita ❤</h2>
     <p> 
-      Mi amor hoy quise escribirte, no porque me falten las palabras cuando estoy contigo, sino porque a veces siento que lo que llevo dentro no cabe en un solo “te amo”. Quiero que sepas, desde lo más profundo de mi corazón, lo importante que eres para mí, eres mi alegría, mi paz, y el motivo más grande por el que sonrío cada día, estar contigo me hace inmensamente feliz, aveces me detengo a pensar en cómo llegaste a mi vida, y no puedo evitar sentirme afortunado, eres esa persona con la que todo se siente más bonito, más sencillo, más real, sé que nuestra relación no es fácil, la distancia, a veces, duele más de lo que decimos, pero también sé que nuestro amor es más fuerte que cualquier kilómetro entre nosotros, porque aunque hoy no pueda abrazarte, ni tomar tu mano, te llevo conmigo en cada pensamiento, en cada suspiro, en cada sueño que tengo contigo, estamos lejos, si, pero eso solo significa que nos estamos preparando para estar tan cerca que nada ni nadie pueda separarnos.
+      Mi amor hoy quise escribirte, no porque me falten las palabras cuando estoy contigo, sino porque a veces siento que lo que llevo dentro no cabe en un solo “te amo”...
     </p>
     <p>
-    Amor, deseo con todo mi ser hacerte sentir amada todos los días, aún desde la distancia, quiero que nunca te falte un abrazo mío, aunque por ahora sea imaginario, una palabra de aliento, un “te amo” que te recuerde lo valiosa que eres, me esfuerzo, y me seguiré esforzando, por ser alguien que sume a tu vida, que te cuide, que te haga sentir en paz, segura, feliz estés donde estés, más allá de las palabras, quiero que lo nuestro funcione, y que cada paso que demos juntos nos acerque más a eso que tanto soñamos, construir una vida a tu lado, casarnos, compartir los días buenos y también los difíciles, y saber que siempre nos tendremos el uno al otro, ese sueño que hemos grabado en nuestras conversaciones, en nuestros planes, en cada promesa que nos hemos hecho lo quiero vivir contigo, amor. Quiero que se haga realidad, prometo seguir amándote con fuerza, con paciencia, con entrega, prometo estar contigo, crecer contigo, caminar contigo, y cuando llegue ese día, cuando al fin estemos juntos, volveré a prometerte, frente al mundo, todo lo que ya hoy te prometo con el corazón.
+      Amor, deseo con todo mi ser hacerte sentir amada todos los días... prometo estar contigo, crecer contigo, caminar contigo...
     </p>
-   <p>
-    Y mientras terminaba esta carta, me di cuenta de algo que cada palabra que te he escrito es más que amor, es una declaración.
-Así que no quiero terminar sin preguntarte:
-   </p>
+    <p>
+      Y mientras terminaba esta carta, me di cuenta de algo que cada palabra que te he escrito es más que amor, es una declaración.
+    </p>
 
+    <!-- Botón siguiente -->
+    <button id="btnSiguiente" onclick="mostrarPregunta()">➡️ Siguiente</button>
 
     <!-- Pregunta romántica -->
     <div id="pregunta">
@@ -154,15 +148,15 @@ Así que no quiero terminar sin preguntarte:
       </div>
     </div>
 
-    <P>
-      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
+    <p id="mensajeFinal" style="display:none;">
+      No importa cuántos kilómetros haya entre nosotros... Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
 
     <!-- Botón de música al final -->
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
 
-  <!-- 🎶 Música predeterminada (puedes cambiar el link por la tuya) -->
+  <!-- 🎶 Música -->
  <audio id="musica" loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
   </audio>
@@ -194,12 +188,15 @@ Así que no quiero terminar sin preguntarte:
         boton.style.display = "inline-block";
         boton.innerHTML = "❤️ Pausar Música";
         boton.classList.add("latido");
-
-        // Mostrar la gran pregunta
-        document.getElementById("pregunta").style.display = "block";
       } else {
         alert("Día en el que hablamos por Omegle 💕 (Formato: DD/MM/YYYY)");
       }
+    }
+
+    function mostrarPregunta(){
+      document.getElementById("pregunta").style.display = "block";
+      document.getElementById("btnSiguiente").style.display = "none";
+      document.getElementById("mensajeFinal").style.display = "block";
     }
 
     function toggleMusica() {
@@ -227,7 +224,10 @@ Así que no quiero terminar sin preguntarte:
     }
 
     function rechazar() {
-      alert("Inténtalo de nuevo amor 🥺");
+      const noBtn = document.querySelector(".no");
+      noBtn.style.position = "absolute";
+      noBtn.style.top = Math.random() * window.innerHeight * 0.8 + "px";
+      noBtn.style.left = Math.random() * window.innerWidth * 0.8 + "px";
     }
 
     function crearCorazon() {
@@ -241,15 +241,6 @@ Así que no quiero terminar sin preguntarte:
         corazon.remove();
       }, 5000);
     }
-
-     function rechazar() {
-      const noBtn = document.querySelector(".no");
-      noBtn.style.position = "absolute";
-      noBtn.style.top = Math.random() * window.innerHeight * 0.8 + "px";
-      noBtn.style.left = Math.random() * window.innerWidth * 0.8 + "px";
-    }
-
-   
   </script>
 </body>
 </html>
