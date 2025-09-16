@@ -114,7 +114,7 @@
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MI AMOrr</h1>
+    <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
@@ -150,7 +150,7 @@ Así que no quiero terminar sin preguntarte:
     </div>
 
     <p id="mensajeFinal" style="display:none;">
-      No importa cuántos kilómetros haya entre nosotros... Con todo mi amor de tu amorcito hermoso ❤️🥺
+      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
 
     <!-- Botón de música al final -->
