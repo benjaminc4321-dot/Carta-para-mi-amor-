@@ -119,7 +119,7 @@
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MI AAMOR</h1>
+    <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
@@ -160,10 +160,10 @@ Así que no quiero terminar sin preguntarte:
   </div>
 
   <!-- 🎶 Música predeterminada (puedes cambiar el link por la tuya) -->
-  <audio id="musica" loop>
-    <source src="https://drive.google.com/file/d/13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA/view?usp=share_link" type="audio/mpeg">
-    Tu navegador no soporta audio.
-  </audio>
+<audio controls autoplay>
+  <source src="https://drive.google.com/uc?export=download&id=13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
 
   <script>
     const passwordCorrecta = "15/05/2025"; 
