@@ -161,7 +161,7 @@ Así que no quiero terminar sin preguntarte:
 
   <!-- 🎶 Música predeterminada (puedes cambiar el link por la tuya) -->
  <audio id="musica" loop>
-    <source src="https://drive.google.com/file/d/13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA/view?usp=share_link" type="audio/mpeg">
+    <source src="https://drive.google.com/uc?export=download&id=13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA" type="audio/mpeg">
   </audio>
   <script>
     const passwordCorrecta = "15/05/2025"; 
