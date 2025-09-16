@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Para mi Amor 💙</title>
+  <title></title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
     body {
@@ -94,8 +94,7 @@
     </div>
 
     <p id="mensajeFinal">
-      No importa cuántos kilómetros haya entre nosotros...  
-      Con todo mi amor de tu amorcito hermoso ❤️🥺
+     No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna.
     </p>
   </div>
 
