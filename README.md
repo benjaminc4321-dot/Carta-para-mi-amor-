@@ -135,7 +135,7 @@
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MI AMORrrr</h1>
+    <h1>MI AMORrr</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
