@@ -119,7 +119,7 @@
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MI AMOR</h1>
+    <h1>MIU AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
@@ -152,7 +152,7 @@ Así que no quiero terminar sin preguntarte:
     </div>
 
     <p>
-      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos... ❤️🥺
+      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
 
     <!-- Botón de música al final -->
@@ -161,7 +161,7 @@ Así que no quiero terminar sin preguntarte:
 
   <!-- 🎶 Música predeterminada (puedes cambiar el link por la tuya) -->
  <audio id="musica" loop>
-    <source src="https://drive.google.com/uc?export=download&id=13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA" type="audio/mpeg">
+    <source src="“https://drive.google.com/uc?export=download&id=13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA”" type="audio/mpeg">
   </audio>
   <script>
     const passwordCorrecta = "15/05/2025"; 
