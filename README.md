@@ -27,48 +27,6 @@
       transition: opacity 1s ease-in-out;
     }
 
-    /* FOTO */
-    .fotoBox {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
-    }
-    #foto {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform .25s ease;
-    }
-    #foto:hover { transform: scale(1.05); }
-
-    /* Modal visor */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    .modal img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    }
-    .cerrar {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 28px;
-      color: white;
-      cursor: pointer;
-    }
-
     input, button {
       padding: 10px 18px;
       border-radius: 10px;
@@ -83,17 +41,6 @@
     }
     button:hover {
       background: #ff5d85;
-    }
-
-    #controlMusica {
-      display: none;
-      margin-top: 20px;
-      background: #e63973;
-      font-size: 18px;
-    }
-    .latido { animation: latido 1s infinite; }
-    @keyframes latido {
-      0% { transform: scale(1); } 25% { transform: scale(1.15); } 50% { transform: scale(1); } 75% { transform: scale(1.15); } 100% { transform: scale(1); }
     }
 
     #pregunta { display: none; margin-top: 20px; }
@@ -149,29 +96,10 @@
       No importa cuántos kilómetros haya entre nosotros...  
       Con todo mi amor de tu amorcito hermoso ❤️🥺
     </p>
-
-    <!-- FOTO aquí después del texto final -->
-  <div class="fotoBox" id="fotoBox" style="display:none;">
-  <img id="foto" 
-       src="https://drive.usercontent.google.com/download?id=1k0tUZ9Nb59tlBOxg4O1g-cZVe9P22VlB&export=view"  
-       alt="Mi amorcito hermoso" />
-</div>
-    <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
-
-  <!-- Modal visor -->
-  <div id="modal" class="modal" onclick="cerrarModal(event)">
-    <span class="cerrar" onclick="cerrarModal(event)">✖</span>
-    <img id="modalImg" src="" alt="Foto grande" />
-  </div>
-
-<audio id="musica" loop>
-  <source src="https://drive.google.com/file/d/13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA/view" type="audio/mpeg">
-</audio>
 
   <script>
     const passwordCorrecta = "15/05/2025"; 
-    let reproduciendo = false;
 
     function mostrarCarta(){
       const clave = document.getElementById("clave").value.trim();
@@ -180,16 +108,6 @@
         const carta = document.getElementById("carta");
         carta.style.display = "block";
         setTimeout(()=> carta.style.opacity = "1", 50);
-
-        const musica = document.getElementById("musica");
-        musica.volume = 0.4; 
-        musica.play().catch(()=>{});
-        reproduciendo = true;
-
-        const boton = document.getElementById("controlMusica");
-        boton.style.display = "inline-block";
-        boton.innerHTML = "❤️ Pausar Música";
-        boton.classList.add("latido");
       } else {
         alert("Día en el que hablamos por Omegle 💕 (Formato: DD/MM/YYYY)");
       }
@@ -199,14 +117,6 @@
       document.getElementById("pregunta").style.display = "block";
       document.getElementById("btnSiguiente").style.display = "none";
       document.getElementById("mensajeFinal").style.display = "block";
-      document.getElementById("fotoBox").style.display = "flex"; // aquí aparece la foto
-    }
-
-    function toggleMusica(){
-      const musica = document.getElementById("musica");
-      const boton = document.getElementById("controlMusica");
-      if(reproduciendo){ musica.pause(); boton.innerHTML = "💔 Reanudar Música"; boton.classList.remove("latido"); reproduciendo=false; }
-      else { musica.play(); boton.innerHTML = "❤️ Pausar Música"; boton.classList.add("latido"); reproduciendo=true; }
     }
 
     function aceptar(){
@@ -229,22 +139,6 @@
       c.style.animationDuration = (3 + Math.random()*2) + "s";
       document.body.appendChild(c);
       setTimeout(()=> c.remove(), 5000);
-    }
-
-    // Modal para la foto
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modalImg");
-
-    document.addEventListener("click", function(e){
-      if(e.target.id === "foto"){
-        modalImg.src = e.target.src;
-        modal.style.display = "flex";
-      }
-    });
-
-    function cerrarModal(){
-      modal.style.display = "none";
-      modalImg.src = "";
     }
   </script>
 </body>
