@@ -121,7 +121,7 @@
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MI AMOR</h1>
+    <h1>MII AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
@@ -143,6 +143,10 @@
     Y mientras terminaba esta carta, me di cuenta de algo que cada palabra que te he escrito es más que amor, es una declaración.
 Así que no quiero terminar sin preguntarte:
    </p>
+
+   </p>
+<button id="siguiente" onclick="mostrarPregunta()">Siguiente</button>
+
 
     <!-- Pregunta romántica -->
     <div id="pregunta">
