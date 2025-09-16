@@ -116,7 +116,7 @@
 </head>
 <body>
   <div id="inicio">
-    <h1>MI AMOReeee</h1>
+    <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     <p>¿Qué día nos conocimos?</p>
     <input type="password" id="clave" placeholder="DD/MM/YYYY" />
@@ -153,7 +153,7 @@
     <!-- FOTO aquí después del texto final -->
   <div class="fotoBox" id="fotoBox" style="display:none;">
   <img id="foto" 
-       src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=600" 
+       src="https://drive.usercontent.google.com/download?id=1k0tUZ9Nb59tlBOxg4O1g-cZVe9P22VlB&export=view"  
        alt="Mi amorcito hermoso" />
 </div>
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
