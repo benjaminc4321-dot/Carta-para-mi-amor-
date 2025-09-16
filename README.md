@@ -101,7 +101,7 @@
   </div>
 
   <script>
-    const passwordCorrecta = "15/05/2025"; 
+    const passwordCorrecta = "15052025"; 
 
     function mostrarCarta(){
       const clave = document.getElementById("clave").value.trim();
