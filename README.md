@@ -119,7 +119,7 @@
 <body>
   <!-- INICIO ocultable -->
   <div id="inicio">
-    <h1>MI AAAMOR</h1>
+    <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     
     <p> Que día nos conocimos:</p>
@@ -150,6 +150,8 @@ Así que no quiero terminar sin preguntarte:
         <div class="opcion no" onclick="rechazar()">No 😢</div>
       </div>
     </div>
+
+        <div id="sorpresa">💍 Eres el amor de mi vida 💍</div>
 
     <p>
       No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
@@ -238,6 +240,15 @@ Así que no quiero terminar sin preguntarte:
         corazon.remove();
       }, 5000);
     }
+
+     function rechazar() {
+      const noBtn = document.querySelector(".no");
+      noBtn.style.position = "absolute";
+      noBtn.style.top = Math.random() * window.innerHeight * 0.8 + "px";
+      noBtn.style.left = Math.random() * window.innerWidth * 0.8 + "px";
+    }
+
+   
   </script>
 </body>
 </html>
