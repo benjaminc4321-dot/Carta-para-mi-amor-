@@ -116,7 +116,7 @@
 </head>
 <body>
   <div id="inicio">
-    <h1>MI AMORRR</h1>
+    <h1>MII AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     <p>¿Qué día nos conocimos?</p>
     <input type="password" id="clave" placeholder="DD/MM/YYYY" />
@@ -165,9 +165,9 @@
     <img id="modalImg" src="" alt="Foto grande" />
   </div>
 
-  <audio id="musica" loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  </audio>
+<audio id="musica" loop>
+  <source src="https://drive.google.com/uc?export=download&id=13j9IRsB4fbysm9GXxNqrAOL2WzElE4MA" type="audio/mpeg">
+</audio>
 
   <script>
     const passwordCorrecta = "15/05/2025"; 
