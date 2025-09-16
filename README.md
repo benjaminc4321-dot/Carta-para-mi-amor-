@@ -116,7 +116,7 @@
 </head>
 <body>
   <div id="inicio">
-    <h1>MI AMOR</h1>
+    <h1>MI AMORRR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     <p>¿Qué día nos conocimos?</p>
     <input type="password" id="clave" placeholder="DD/MM/YYYY" />
