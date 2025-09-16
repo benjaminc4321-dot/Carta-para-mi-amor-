@@ -97,7 +97,7 @@
      No importa cuántos kilómetros haya entre nosotros, lo que siento por ti los atraviesa todos. Yo te elijo, aún en la distancia, y te seguiré eligiendo cuando por fin estemos frente a frente.Gracias por ser tú, gracias por elegirme cada día, yo te elijo a ti, siempre, incluso en la distancia y mucho más cuando por fin no haya ninguna. Con todo mi amor de tu amorcito hermoso ❤️🥺
      </p>
 
-      <p>
+      <p id="mensajeFinal">
       Hoy tal vez nos tocó pedirlo de esta manera, a la distancia, a través de una pantalla… pero te prometo que cuando nos veamos será diferente. Con el corazón latiendo a mil, frente a frente, te volveré a pedir, por milésima vez, que seas mi novia. Esta vez sin distancia, sin pantallas, solo tú y yo, mirándonos a los ojos y escuchando un “sí” que nos pertenezca solo a nosotros.
     </p>
 
