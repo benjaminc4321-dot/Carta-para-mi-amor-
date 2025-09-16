@@ -116,7 +116,7 @@
 </head>
 <body>
   <div id="inicio">
-    <h1>MI AMOReee</h1>
+    <h1>MI AMOR</h1>
     <h2>💌 Tengo algo especial para ti...</h2>
     <p>¿Qué día nos conocimos?</p>
     <input type="password" id="clave" placeholder="DD/MM/YYYY" />
@@ -151,10 +151,11 @@
     </p>
 
     <!-- FOTO aquí después del texto final -->
-    <div class="fotoBox" id="fotoBox" style="display:none;">
-      <!-- Si usas Google Drive: cambia REEMPLAZA_AQUI con el ID de tu foto -->
-      <img id="foto" src="https://drive.google.com/uc?export=view&id=1k0tUZ9Nb59tlBOxg4O1g-cZVe9P22VlB" alt="Mi amorcito hermoso" />
-    </div>
+   <div class="fotoBox" id="fotoBox" style="display:none;">
+  <img id="foto" 
+       src="https://drive.google.com/uc?export=view&id=1k0tUZ9Nb59tlBOxg4O1g-cZVe9P22VlB" 
+       alt="Mi amorcito hermoso" />
+</div>
 
     <button id="controlMusica" onclick="toggleMusica()">❤️ Pausar Música</button>
   </div>
